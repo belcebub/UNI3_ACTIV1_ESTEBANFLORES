@@ -17,6 +17,6 @@ public class PruebaElectrodomestico {
         
         
         
-        System.out.println("Ingrese ");
+        System.out.println("Ingrese el precio de la lavadora ");
     }
 }
