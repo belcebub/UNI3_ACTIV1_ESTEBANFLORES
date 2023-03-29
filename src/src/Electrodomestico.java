@@ -81,5 +81,39 @@ public class Electrodomestico {
             } 
         }
         this.color = COLOR_DEF;
-    } 
+    }
+    public void precioFinal(char consEnergico, float peso){
+        switch (consEnergetico) {
+            case 'A':
+                precioBase += 100f;
+                break;
+            case 'B':
+                precioBase += 80f;
+                break;
+            case 'C':
+                precioBase += 60f;
+                break;
+            case 'D':
+                precioBase += 50f;
+                break;
+            case 'E':
+                precioBase += 30f;
+                break;
+            case 'F':
+                precioBase += 10f;
+        }
+        if (peso < 20){
+            precioBase += 10f;
+        } else{
+            if (peso >= 20 && peso < 50){
+                precioBase += 50f;
+            } else {
+                if(peso >= 50 && peso <= 80){
+                    precioBase += 80f;
+                } else {
+                    precioBase += 100f;
+                }
+            }
+        }
+    }
 }
